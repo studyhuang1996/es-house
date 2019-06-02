@@ -1,0 +1,37 @@
+
+#jpa 设置
+spring:
+  jpa:
+#     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+
+  profiles:
+    active: dev
+
+  session:
+    store-type: hash_map
+
+
+      #thymeleaf
+  thymeleaf:
+    mode: HTML
+    suffix: .html
+    prefix: classpath:/templates/*
+
+
+logging:
+  level:
+    org :
+      hirbernate:
+        SQL: debug
+security:
+  basic:
+    enabled: false
+
+
+
